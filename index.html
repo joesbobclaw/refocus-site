@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Refocus</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-2: #f78166;
+            --accent-3: #7ee787;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--accent), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+        .digest-list {
+            list-style: none;
+        }
+        .digest-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .digest-item:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+        }
+        .digest-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .digest-date {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        .digest-title {
+            color: var(--text);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .digest-summary {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .empty-state {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 3rem 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Refocus</h1>
+            <p class="tagline">What's on your mind? Patterns from your conversations.</p>
+        </header>
+
+        <div class="empty-state">
+            Loading...
+        </div>
+
+        <footer>
+            <p>Curated by Bob • <a href="https://github.com/joesbobclaw/refocus-recipe">Powered by refocus-recipe</a></p>
+        </footer>
+    </div>
+</body>
+</html>
