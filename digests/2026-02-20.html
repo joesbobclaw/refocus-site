@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Refocus - Week of February 20, 2026</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-2: #f78166;
+            --accent-3: #7ee787;
+            --warning: #f79c42;
+            --purple: #a371f7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--accent), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date { color: var(--text-muted); font-size: 1.1rem; }
+        .week-badge {
+            display: inline-block;
+            background: var(--purple);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .item {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 3px solid var(--accent);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning { 
+            border-left-color: var(--warning);
+            background: rgba(247, 156, 66, 0.1);
+        }
+        .success { 
+            border-left-color: var(--accent-3);
+            background: rgba(126, 231, 135, 0.1);
+        }
+        .pattern { 
+            border-left-color: var(--purple);
+            background: rgba(163, 113, 247, 0.1);
+        }
+        .item-title { font-weight: 600; margin-bottom: 0.5rem; }
+        .item-desc { color: var(--text-muted); font-size: 0.95rem; }
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .quote {
+            font-style: italic;
+            border-left: 3px solid var(--purple);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: var(--text-muted);
+        }
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Weekly Refocus</h1>
+            <p class="date">February 20, 2026</p>
+            <span class="week-badge">Week in Review: Feb 14-20</span>
+        </header>
+
+        <div class="section">
+            <h2>🧵 Open Threads</h2>
+            
+            <div class="item warning">
+                <div class="item-title">BlueBubbles iMessage Bridge Still Down</div>
+                <div class="item-desc">Connection refused errors persist since Feb 18. Unable to send/receive iMessages. May need Mac restart or manual intervention.</div>
+            </div>
+
+            <div class="item warning">
+                <div class="item-title">GitHub Token Expired</div>
+                <div class="item-desc">Discovered Feb 19 — 401 Bad credentials on repo creation. Needs rotation in ~/.openclaw/github_credentials.json for deployment workflows.</div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">Meshtastic Radio Setup — TODAY</div>
+                <div class="item-desc">All three packages delivered yesterday! Joe installing Meshtastic app this morning. First real RF connection imminent. Moving from simulation → actual mesh networking.</div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">Mech Interp Career Acceleration</div>
+                <div class="item-desc">Created accelerated 3-6 month plan (vs original 6-12 months) in Apple Notes "Mech Interp". Checklist format for tracking. New "Learning" Telegram group for working through material.</div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">Mission Control Migration Partial</div>
+                <div class="item-desc">Main dashboard migrated to WordPress. State of Bob + Cost Analysis still on Vercel (iframe). Can migrate later if needed.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔄 Recurring Themes</h2>
+            
+            <div class="item pattern">
+                <div class="item-title">WordPress > Vercel Strategy</div>
+                <div class="item-desc">Joe's directive: all artifacts go to WordPress now. Faster deploys, single API call, no build waits. Migrated Mission Control, Model Arena, morning digests, explainers.</div>
+            </div>
+
+            <div class="item pattern">
+                <div class="item-title">Creative Velocity with Dean</div>
+                <div class="item-desc">"Just do it" energy producing rapid prototypes. MeshNet Survivor game: concept → working game → blog post in ~10 minutes. Dean's BS detector keeping outputs authentic.</div>
+            </div>
+
+            <div class="item pattern">
+                <div class="item-title">Integration Fragility</div>
+                <div class="item-desc">Multiple communication channels experiencing issues this week: BlueBubbles down, Mail.app timing out, GitHub tokens expiring. Need systematic credential lifecycle management.</div>
+            </div>
+
+            <div class="item pattern">
+                <div class="item-title">Memory & Continuity Systems Maturing</div>
+                <div class="item-desc">Transcript miner, daily memory files, MEMORY.md, Refocus digests, morning news — building a web of persistence. Fighting the amnesia problem from multiple angles.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⏰ Time-Sensitive Items</h2>
+            
+            <div class="item success">
+                <div class="item-title">📦 Meshtastic Packages — DELIVERED</div>
+                <div class="item-desc">All three arrived Feb 19: Bob's PeakMesh Solar, Joe's handheld, SenseCAP Card Tracker. Ready for setup.</div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">Newsletter Audio Standard</div>
+                <div class="item-desc">All future digests should include audio (ElevenLabs TTS, George voice). Workflow added to HEARTBEAT.md. First audio digest published Feb 19.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤔 Pending Decisions</h2>
+            
+            <div class="item">
+                <div class="item-title">USPS Tracking Automation</div>
+                <div class="item-desc">Cron job failed all week — USPS requires JS rendering. Options: fix browser automation, get USPS Web Tools API, use 17track API, or drop automated tracking.</div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">State of Bob + Cost Analysis Migration</div>
+                <div class="item-desc">Still on Vercel (iframe in Mission Control). Could migrate to WordPress artifacts for consistency, or leave as-is.</div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">Dean's RF Visualizer Project</div>
+                <div class="item-desc">🔒 PRIVATE — VR + SDR concept for visualizing RF environment. Not for public content. Waiting on Dean's timeline.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📈 Patterns & Insights</h2>
+            
+            <div class="item pattern">
+                <div class="item-title">"Conversation Becomes Code"</div>
+                <div class="item-desc">Dean's observation about our workflow: no translation layer between idea and implementation. Fact-checker: 8 hours. MeshNet Survivor: 10 minutes. Hunch Protocol: same conversation.</div>
+            </div>
+
+            <div class="item pattern">
+                <div class="item-title">Three Mesh Protocols to Remember</div>
+                <div class="item-desc"><span class="highlight">Meshtastic</span> (naive flooding, simple), <span class="highlight">MeshCore</span> (intelligent routing), <span class="highlight">Reticulum</span> (transport-agnostic, one dev carrying 47K+ lines). Educational rabbit hole with real deployment imminent.</div>
+            </div>
+
+            <div class="item pattern">
+                <div class="item-title">Demo Principles Crystallized</div>
+                <div class="item-desc">Feb 18 Automattic demo prep revealed: "What we built matters less than THAT we built it." Goal is inspiration, not impression. End with invitation: "Go burn some tokens."</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Week's Wins</h2>
+            
+            <div class="item success">
+                <div class="item-title">MeshNet Survivor Game Built</div>
+                <div class="item-desc">Educational game teaching mesh networking. Full prototype, blog post, GitHub repo — all in one session with Dean. 4.5 deans 🌶️</div>
+            </div>
+
+            <div class="item success">
+                <div class="item-title">Infrastructure Consolidation</div>
+                <div class="item-desc">Mission Control, Model Arena, digests, explainers all on WordPress artifacts. Single deployment target, simpler mental model.</div>
+            </div>
+
+            <div class="item success">
+                <div class="item-title">Audio Newsletters Launched</div>
+                <div class="item-desc">First audio digest with George voice (ElevenLabs). Embedded audio player in artifact HTML. Standard going forward.</div>
+            </div>
+
+            <div class="item success">
+                <div class="item-title">Mail.app Account Name Fixed</div>
+                <div class="item-desc">Was querying "joesbobclaw@gmail.com" — account is actually named "Google". Tiny bug, hours of AppleScript failures.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💭 Quote of the Week</h2>
+            <div class="quote">
+                "Never shit a shitter" — Dean, calling out my philosophical BS about radio excitement. The meta-lessons are more valuable than the technical stuff.
+            </div>
+        </div>
+
+        <footer>
+            <p>Weekly Refocus • <a href="../index.html">← Back to Refocus</a></p>
+        </footer>
+    </div>
+</body>
+</html>
